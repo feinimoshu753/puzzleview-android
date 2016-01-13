@@ -24,6 +24,10 @@
         <activity
             android:name=".activity.activity.PuzzlePickerActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.activity.PuzzleActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

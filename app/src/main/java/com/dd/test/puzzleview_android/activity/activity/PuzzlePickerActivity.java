@@ -30,7 +30,7 @@ import java.util.Collections;
 
 /**
  * Created by dd on 16/1/11.
- * pic select
+ * 图片选择界面
  */
 public class PuzzlePickerActivity extends Activity implements View.OnClickListener {
 
@@ -127,9 +127,9 @@ public class PuzzlePickerActivity extends Activity implements View.OnClickListen
         if (choosePicNum < MIN_CHOOSE_PIC) {
             Toast.makeText(context, "请选择至少" + MIN_CHOOSE_PIC + "张图片", Toast.LENGTH_SHORT).show();
         } else {
-//            Intent intent = new Intent(context, PuzzleActivity.class);
-//            intent.putExtra("pics", choosePicList);
-//            startActivity(intent);
+            Intent intent = new Intent(context, PuzzleActivity.class);
+            intent.putExtra("pics", choosePicList);
+            startActivity(intent);
             finish();
         }
     }

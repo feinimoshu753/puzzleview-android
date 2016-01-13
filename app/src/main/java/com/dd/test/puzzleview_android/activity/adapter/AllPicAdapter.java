@@ -27,10 +27,6 @@ public class AllPicAdapter extends RecyclerView.Adapter<AllPicAdapter.ViewHolder
         this.onRvItemClickListener = onRvItemClickListener;
     }
 
-    public interface OnRvItemClickListener {
-        void onItemClick(int position);
-    }
-
     public AllPicAdapter(Context context, List<ImageBean> bean) {
         this.context = context;
         this.picList = bean;
@@ -84,5 +80,9 @@ public class AllPicAdapter extends RecyclerView.Adapter<AllPicAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
         }
+    }
+
+    public interface OnRvItemClickListener {
+        void onItemClick(int position);
     }
 }

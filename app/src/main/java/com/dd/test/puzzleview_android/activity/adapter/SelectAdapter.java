@@ -30,10 +30,6 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
         this.onRvItemClickListener = onRvItemClickListener;
     }
 
-    public interface OnRvItemClickListener {
-        void onItemClick(int position);
-    }
-
     public SelectAdapter(Context context, List<ImageBean> bean) {
         this.context = context;
         this.picList = bean;
@@ -87,5 +83,9 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
         }
+    }
+
+    public interface OnRvItemClickListener {
+        void onItemClick(int position);
     }
 }
