@@ -67,9 +67,9 @@ public class PuzzleView extends View {
 
     public void setPics(List<ImageBean> imageBeans) {
 
-        leftMargin = (AppUtil.getScreenWidth(context) - dp2px(330)) / 2;
-        viewWdh = dp2px(330);
-        viewHgt = dp2px(440);
+        leftMargin = (AppUtil.getScreenWidth(context) - dp2px(320)) / 2;
+        viewWdh = dp2px(320);
+        viewHgt = dp2px(450);
         pics = new ArrayList<>();
         if (imageBeans != null) {
             pics.addAll(imageBeans);

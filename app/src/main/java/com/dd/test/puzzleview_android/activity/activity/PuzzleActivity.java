@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import com.dd.test.puzzleview_android.R;
 import com.dd.test.puzzleview_android.activity.dialog.TemplateDialog;
 import com.dd.test.puzzleview_android.activity.entity.ImageBean;
-import com.dd.test.puzzleview_android.activity.entity.ImageItem;
 import com.dd.test.puzzleview_android.activity.entity.Puzzle;
 import com.dd.test.puzzleview_android.activity.util.FileUtil;
 import com.dd.test.puzzleview_android.activity.view.PuzzleView;
@@ -21,7 +19,6 @@ import com.dd.test.puzzleview_android.activity.view.TopView;
 import com.google.gson.Gson;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -39,7 +36,7 @@ public class PuzzleActivity extends Activity implements View.OnClickListener {
     private List<ImageBean> imageBeans;
     private Puzzle puzzleEntity;
     private TemplateDialog templateDialog;
-    private String pathFileNmae;
+    private String pathFileName;
     private int lastSelect = 0;
 
     @Override
@@ -74,8 +71,8 @@ public class PuzzleActivity extends Activity implements View.OnClickListener {
         topView.setTitle("拼图");
         topView.setRightWord("保存");
         puzzleView.setPics(imageBeans);
-        if (pathFileNmae != null) {
-            initCoordinateData(pathFileNmae, 0);
+        if (pathFileName != null) {
+            initCoordinateData(pathFileName, 0);
         }
     }
 
@@ -100,7 +97,7 @@ public class PuzzleActivity extends Activity implements View.OnClickListener {
             @Override
             public void OnItemListener(int position) {
                 if (position != lastSelect) {
-                    initCoordinateData(pathFileNmae, position);
+                    initCoordinateData(pathFileName, position);
                     puzzleView.invalidate();
                     lastSelect = position;
                 }
@@ -114,16 +111,16 @@ public class PuzzleActivity extends Activity implements View.OnClickListener {
         switch (picNum) {
 
             case 2:
-                pathFileNmae = "num_two_style";
+                pathFileName = "num_two_style";
                 break;
             case 3:
-                pathFileNmae = "num_three_style";
+                pathFileName = "num_three_style";
                 break;
             case 4:
-                pathFileNmae = "num_four_style";
+                pathFileName = "num_four_style";
                 break;
             case 5:
-                pathFileNmae = "num_five_style";
+                pathFileName = "num_five_style";
                 break;
             default:
                 break;

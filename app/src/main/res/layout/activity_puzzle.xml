@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/top_view"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:padding="5dp"
         android:background="#ffffff"
         android:orientation="vertical">

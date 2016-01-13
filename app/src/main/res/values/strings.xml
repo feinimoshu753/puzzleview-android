@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">puzzleview-android</string>
-    <string name="select_pic">select-pic</string>
+    <string name="select_pic">选择图片</string>
 </resources>
